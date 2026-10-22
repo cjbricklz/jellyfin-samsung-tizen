@@ -1,0 +1,6 @@
+#!/bin/sh
+exec 2>&1
+exec chpst -u jellyfin:jellyfin /opt/jellyfin/jellyfin \
+    --datadir /var/lib/jellyfin \
+    --cachedir /var/cache/jellyfin \
+    --ffmpeg /opt/jellyfin-ffmpeg/ffmpeg
